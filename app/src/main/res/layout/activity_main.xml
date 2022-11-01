@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:justifyContent="center"
+        app:alignItems="center"
+        app:flexDirection="column"
+        android:padding="50px"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="500px"
+            android:src="@drawable/logo_p"
+            android:scaleType="centerCrop"></ImageView>
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:justifyContent="center"
+        app:alignItems="center"
+        app:flexDirection="column"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textSize="80px"
+            android:textAlignment="center"
+            android:textColor="@color/primary_dark_deep"/>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="1000px"
+            android:background="@drawable/bubble">
+        </com.google.android.flexbox.FlexboxLayout>
+    </com.google.android.flexbox.FlexboxLayout>
+</LinearLayout>
