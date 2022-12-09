@@ -69,7 +69,7 @@ public class MyDatabase {
     //trả về toàn bộ id của project mà người dùng hiện phải chủ trì (manager, own)
     public static String[] getOwnProject(String myId){
         String[] all_project_id = {"20127306", "20127333"};
-        String query = "select projectID from Project p inner join UserResponProject urp on p.projectID = urp.projectID inner join UserInFor uif on uif.username = uif.username where "+ myId +" = projectOwner";
+        String query = "select projectID from Project p inner join UserResponProject urp on p.projectID = urp.projectID inner join UserInFor uif on uif.username = urp.username and "+ myId +" = p.projectOwner";
         return all_project_id;
     }
 
@@ -82,6 +82,7 @@ public class MyDatabase {
     //trả về toàn bộ id của project mà người dùng hiện tham gia
     public static String[] getCurrentResponProject(String myId){
         String[] all_project_id = {"20127306", "20127333"};
+        String query = "select projectID from Project P inner join UserResponProject urp on p.projectID = urp.projectID inner join UserInFor uif on uif.username = urp.username and "+ myId +" = urp.username";
         return all_project_id;
     }
 
