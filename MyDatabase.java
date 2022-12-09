@@ -76,6 +76,7 @@ public class MyDatabase {
     //trả về toàn bộ id của project mà người dùng hiện KHÔNG tham gia và KHÔNG phải chủ trì
     public static String[] getAllProject(String myId){
         String[] all_project_id = {"20127306", "20127333"};
+        String query = "select projectID from Project p inner join UserResponProject urp on p.projectID = urp.projectID inner join UserInFor uif on uif.username = urp.username and "+ myId +" <> urp.username and "+ myId +" <> p.projectOwner";
         return all_project_id;
     }
 
