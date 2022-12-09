@@ -25,42 +25,42 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 //    CREATE TABLE
     public void createUserInforTable(SQLiteDatabase db){
-        String query = "CREATE TABLE UserInFor (username TEXT PRIMARY KEY, pass TEXT, fullname TEXT, overview TEXT, totalTasks INT, totalHours INT, currentTask INT, currentFinished INT)";
+        String query = "CREATE TABLE UserInFor (username TEXT, pass TEXT, fullname TEXT, overview TEXT, totalTasks INT, totalHours INT, currentTask INT, currentFinished INT, PRIMARY KEY(username))";
         db.execSQL(query);
     }
 
     public void createActivityTable(SQLiteDatabase db){
-        String query = "CREATE TABLE Activity (activityID INT PRIMARY KEY, activityName TEXT, activityDescribe TEXT, activityDeadline DATE, activityHost TEXT, activityFile TEXT, activityStatus TEXT, activityAgreement BOOLEAN)";
+        String query = "CREATE TABLE Activity (activityID INT, activityName TEXT, activityDescribe TEXT, activityDeadline DATE, activityHost TEXT, activityFile TEXT, activityStatus TEXT, activityAgreement BOOLEAN, PRIMARY KEY(activityID))";
         db.execSQL(query);
     }
 
     public void createProjectTable(SQLiteDatabase db){
-        String query = "CREATE TABLE Project (projectID INT PRIMARY KEY, projectName TEXT, projectOwner TEXT, projectDeadline DATE, projectDescribe DATE, projectPrivacy TEXT)";
+        String query = "CREATE TABLE Project (projectID INT, projectName TEXT, projectOwner TEXT, projectDeadline DATE, projectDescribe DATE, projectPrivacy TEXT, PRIMARY KEY(projectID))";
         db.execSQL(query);
     }
 
     public void createUserConnection(SQLiteDatabase db){
-        String query = "CREATE TABLE UserConnection (usernameA TEXT PRIMARY KEY, usernameB TEXT PRIMARY KEY)";
+        String query = "CREATE TABLE UserConnection (usernameA TEXT, usernameB TEXT,  PRIMARY KEY(usernameA,usernameB), FOREIGN KEY(usernameA) references UserInFor(username), FOREIGN KEY(usernameB) references UserInFor(username))";
         db.execSQL(query);
     }
 
     public void createUserResponActivity(SQLiteDatabase db){
-        String query = "CREATE TABLE UserResponActivity (activityID INT PRIMARY KEY, username TEXT PRIMARY KEY)";
+        String query = "CREATE TABLE UserResponActivity (activityID INT, username TEXT, PRIMARY KEY(activityID,username), FOREIGN KEY(activityID) references Activity(activityID), FOREIGN KEY(username) references UserInFor(username))";
         db.execSQL(query);
     }
 
     public void createAchieveActivity(SQLiteDatabase db){
-        String query = "CREATE TABLE AchieveActivity (username TEXT PRIMARY KEY, activityID INT PRIMARY KEY)";
+        String query = "CREATE TABLE AchieveActivity (username TEXT, activityID INT, PRIMARY KEY(username,activityID), FOREIGN KEY(username) references UserInFor(username), FOREIGN KEY(activityID) references Activity(activityID))";
         db.execSQL(query);
     }
 
     public void createActivityInProject(SQLiteDatabase db){
-        String query = "CREATE TABLE ActivityInProject (projectID INT PRIMARY KEY, activityID INT PRIMARY KEY)";
+        String query = "CREATE TABLE ActivityInProject (projectID INT, activityID INT, PRIMARY KEY(projectID,activityID), FOREIGN KEY(projectID) references Project(projectID), FOREIGN KEY(activityID) references Activity(activityID))";
         db.execSQL(query);
     }
 
     public void createUserResponProject(SQLiteDatabase db){
-        String query = "CREATE TABLE UserResponProject (username TEXT PRIMARY KEY, projectID INT PRIMARY KEY)";
+        String query = "CREATE TABLE UserResponProject (username TEXT, projectID INT, PRIMARY KEY(username,projectID), FOREIGN KEY(username) references UserInFor(username), FOREIGN KEY(projectID) references Project(projectID))";
         db.execSQL(query);
     }
 
