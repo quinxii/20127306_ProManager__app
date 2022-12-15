@@ -138,30 +138,12 @@
                 app:justifyContent="center"
                 app:alignItems="center"
                 android:layout_marginHorizontal="50px"
-                android:layout_marginBottom="50px">
-            </com.google.android.flexbox.FlexboxLayout>
-            <com.google.android.flexbox.FlexboxLayout
-                android:layout_marginTop="40px"
-                android:layout_marginRight="50px"
-                android:layout_marginBottom="180px"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:justifyContent="flex_end">
-                <TextView
-                    android:layout_width="350px"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/submit_button"
-                    android:padding="25px"
-                    android:text="Confirm"
-                    android:onClick="dbCreateActivity"
-                    android:textColor="@color/black"
-                    android:textAlignment="center"
-                    android:textSize="40px"/>
+                android:layout_marginBottom="80px">
             </com.google.android.flexbox.FlexboxLayout>
         </com.google.android.flexbox.FlexboxLayout>
 
         <com.google.android.flexbox.FlexboxLayout
-            android:layout_marginTop="40px"
+            android:layout_marginTop="80px"
             android:layout_marginRight="50px"
 
             android:layout_marginBottom="180px"
@@ -173,7 +155,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/submit_button"
                 android:padding="25px"
-                android:text="Add to Project"
+                android:text="Create"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textSize="40px"/>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.flexbox.FlexboxLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:justifyContent="center"
+    app:alignItems="center"
+    android:paddingTop="80px"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/primary">
+
+    <com.google.android.flexbox.FlexboxLayout
+        app:flexDirection="column"
+        android:backgroundTint="@color/white_gray"
+        android:background="@drawable/border_radius_stroke_box"
+        android:paddingLeft="80px"
+        android:paddingRight="80px"
+        android:paddingTop="70px"
+        android:paddingBottom="70px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:justifyContent="flex_start"
+            android:layout_marginBottom="25px">
+            <TextView
+                android:layout_width="250px"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_button"
+                android:padding="35px"
+                android:text="Back"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="40px"/>
+        </com.google.android.flexbox.FlexboxLayout>
+        <TextView
+            android:id="@+id/hoster_textview"
+            android:textSize="60px"
+            android:textColor="@color/primary_dark_deep"
+            android:layout_marginTop="30px"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Architecture Definition"
+            />
+
+        <TextView
+            android:id="@+id/activity_header_textview"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24px"
+            android:text="Host by User"/>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            app:alignItems="center">
+            <ImageView
+                android:layout_margin="10px"
+                android:src="@drawable/exclamation_icon"
+                android:layout_width="50px"
+                android:layout_height="50px"/>
+            <TextView
+                android:id="@+id/activity_deadline_textview"
+                android:textColor="@color/black"
+                android:textSize="30px"
+                android:text="Deadline in 14/11/2022"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16px"/>
+            <TextView
+                android:id="@+id/activity_deadline_textview"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <TextView
+            android:textColor="@color/primary_dark_deep"
+            android:textSize="30px"
+            android:textStyle="bold"
+            android:text="Describe details: "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"/>
+
+        <TextView
+            android:textColor="@color/gray"
+            android:textSize="32px"
+            android:text="Report directly to the General Manager of the branch. Receive calls, take messages, and record correspondence. Handle inquiries and requests. Arrange meetings and take minutes
+Produce reports and organise data.
+Report directly to the General Manager of the branch. Receive calls, take messages, and record correspondence. Handle inquiries and requests. Arrange meetings and take minutes
+Produce reports and organise data."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15px"/>
+
+        <TextView
+            android:textColor="@color/primary_dark_deep"
+            android:textSize="30px"
+            android:textStyle="bold"
+            android:text="Activity Related: "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"/>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:background="@drawable/border"
+            app:justifyContent="center"
+            app:alignItems="center"
+            android:layout_marginTop="40px">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Activity name"
+                android:gravity="center"
+                android:layout_marginRight="50px"
+                android:textSize="40px"/>
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:background="@drawable/border"
+            app:justifyContent="center"
+            app:alignItems="center"
+            android:layout_marginTop="40px">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Activity name"
+                android:gravity="center"
+                android:layout_marginRight="50px"
+                android:textSize="40px"/>
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:background="@drawable/border"
+            app:justifyContent="center"
+            app:alignItems="center"
+            android:layout_marginTop="40px">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Activity name"
+                android:gravity="center"
+                android:layout_marginRight="50px"
+                android:textSize="40px"/>
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:background="@drawable/back_button"
+            app:justifyContent="center"
+            app:alignItems="center"
+            android:layout_marginTop="40px">
+            <TextView
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add new activity"
+                android:gravity="center"
+                android:layout_marginRight="50px"
+                android:textSize="40px"/>
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <TextView
+            android:textColor="@color/primary_dark_deep"
+            android:textSize="30px"
+            android:textStyle="bold"
+            android:text="Current Responsibility: "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"/>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:justifyContent="space_between"
+            app:alignItems="center"
+            android:layout_marginTop="15px">
+            <ImageView
+                android:layout_marginTop="16px"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:background="@drawable/avatar"/>
+            <ImageView
+                android:layout_marginTop="16px"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:background="@drawable/avatar"/>
+            <ImageView
+                android:layout_marginTop="16px"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:background="@drawable/avatar"/>
+            <ImageView
+                android:layout_marginTop="16px"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:background="@drawable/avatar"/>
+            <ImageView
+                android:layout_marginTop="16px"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:background="@drawable/avatar"/>
+            <ImageView
+                android:layout_marginTop="16px"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:background="@drawable/avatar"/>
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </com.google.android.flexbox.FlexboxLayout>
+</com.google.android.flexbox.FlexboxLayout>
